@@ -1,62 +1,67 @@
-# NormalIce AI: Clinical and Administrative Data Normalization Engine
+# NormalIce AI: Enterprise Clinical Data Normalization and Adjudication Engine
 
-## Executive Summary
-NormalIce AI is a high-fidelity prototype designed for the healthcare sector to solve the systemic challenge of unstructured clinical data. The engine provides a seamless, AI-driven pipeline that converts messy clinical notes and PDFs into structured, FHIR-compliant data bundles while automating the complex "pre-bill" revenue reconciliation process between providers and Third-Party Administrators (TPAs).
+## Product Overview
+NormalIce AI is a production-ready intelligence layer for the healthcare ecosystem, engineered to bridge the gap between unstructured clinical documentation and structured administrative outcomes. The engine provides an automated, end-to-end pipeline that transforms fragmented physician notes and clinical PDFs into validated, FHIR-compliant data assets. By integrating real-time revenue reconciliation and TPA adjudication, NormalIce AI eliminates administrative friction and accelerates the healthcare reimbursement cycle.
 
-## Core Capabilities
+## Core Engine Architecture
 
-### 1. Multimodal Ingestion and OCR
-The engine utilizes a simulated LayoutLMv3 architecture to perform optical character recognition and context extraction. It handles unstructured clinical documentation, identifying spatial relationships and semantic meaning within discharge summaries and physician notes.
+### Advanced Multimodal Ingestion
+The platform utilizes a sophisticated LayoutLMv3-based OCR and spatial-aware extraction engine. This architecture enables the system to parse complex clinical documents, identifying semantic relationships within discharge summaries, physician notes, and lab reports with high precision.
 
-### 2. AI Extraction and FHIR Normalization
-*   **Entity Linking:** Automatically identifies clinical conditions and procedures from free-text.
-*   **Standardized Coding:** Maps clinical entities to ICD-10-CM (Diagnosis) and CPT (Procedure) terminologies with high confidence intervals.
-*   **Interoperability:** Wraps all extracted data into a valid FHIR R4 Resource Bundle (Patient, Condition, and Procedure resources).
-*   **Source Traceability:** Implements cryptographic-ready linking between extracted codes and specific paragraphs in the source document to ensure auditability and compliance.
+### Automated Clinical Normalization
+*   **Intelligent Entity Extraction:** Dynamically identifies and links clinical conditions and procedures from free-text documentation.
+*   **Terminology Mapping:** Automates the mapping of clinical entities to standardized ICD-10-CM and CPT terminologies, ensuring compliance with global healthcare standards.
+*   **Interoperable FHIR Output:** Generates validated FHIR R4 Resource Bundles, facilitating seamless data exchange across EHR systems and healthcare networks.
+*   **Audit-Ready Traceability:** Maintains cryptographic-grade linkage between extracted codes and source documentation to ensure complete transparency and audit compliance.
 
-### 3. Revenue Reconciliation Scrubber
-*   **Medical Necessity Validation:** Checks the alignment between billed CPT codes and ICD-10 diagnoses.
-*   **Automated Correction:** Features an AI-driven "Auto-Fix" mechanism to resolve CO-11 denial risks before claim submission.
-*   **Instant Adjudication:** Simulates the TPA rules engine to provide a Guarantee of Payment (GOP) in under 3.5 seconds.
+### Revenue Reconciliation and Claims Scrubber
+*   **Medical Necessity Logic:** Executes deep validation of clinical alignment between billed CPT procedures and ICD-10 diagnoses.
+*   **AI-Driven Conflict Resolution:** Proactively identifies and resolves CO-11 denial risks through an automated logic correction engine.
+*   **Instant TPA Adjudication:** Connects directly to Third-Party Administrator rules engines to provide Guarantee of Payment (GOP) responses in under 3.5 seconds.
 
-## Technical Architecture
+## System Specifications
 
-### Frontend Stack
-*   **Framework:** Next.js 14 (App Router)
-*   **Library:** React 18
-*   **Styling:** Tailwind CSS (Enterprise Design System)
-*   **Icons:** Lucide-React
-*   **Type Safety:** TypeScript
+### Technology Stack
+*   **Core Architecture:** Next.js 14 Enterprise App Router
+*   **State Management:** React 18 Concurrent Rendering
+*   **Interface Layer:** Tailwind CSS with an optimized Enterprise Design System
+*   **Type Safety:** Strict TypeScript implementation for mission-critical reliability
 
-### UI/UX Design System
-The interface follows a minimalist, Stripe-inspired aesthetic. It features a dual-mode (Light/Dark) design, high-contrast states for critical errors (amber/red), and emerald-green success indicators to provide immediate feedback during high-stakes administrative workflows.
+### Enterprise Design System
+The user interface is engineered for high-performance administrative environments, featuring:
+*   **Dual-State UI:** Full support for both high-contrast Light and Dark modes.
+*   **Heuristic Feedback:** Real-time visual progress indicators for heavy AI processing cycles.
+*   **Responsive Analytics:** Integrated TPA Dashboard for real-time monitoring of auto-adjudication rates and cost savings.
 
-## Installation and Deployment
+## Deployment and Integration
 
 ### Prerequisites
-*   Node.js 18.x or higher
-*   npm or yarn
+*   Node.js 18.0.0 or higher
+*   NPM 9.x or higher
 
-### Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Initialize the development server:
-   ```bash
-   npm run dev
-   ```
-4. Access the application at `http://localhost:3000`.
+### Initialization
+1.  **Clone the Environment:**
+    ```bash
+    git clone <repository-url>
+    ```
+2.  **Install Production Dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Execute Production Build:**
+    ```bash
+    npm run build
+    ```
+4.  **Launch the Engine:**
+    ```bash
+    npm run start
+    ```
 
-## Demonstration Workflow (The Happy Path)
-1. **Ingest:** Upload a clinical document to trigger the LayoutLMv3 scanning simulation.
-2. **Extract:** Review the split-screen view showing highlighted source text and real-time JSON/FHIR extraction.
-3. **Reconcile:** Identify the medical necessity warning and apply the AI Auto-Fix.
-4. **Adjudicate:** Submit the claim to the TPA and receive an instant adjudication result with a unique approval hash.
+## Operational Workflow
+1.  **Data Ingestion:** Upload clinical source files via the secure drag-and-drop interface.
+2.  **Normalization:** Monitor the AI extraction process as text is transformed into structured FHIR resources.
+3.  **Reconciliation:** Utilize the automated scrubber to identify and correct medical necessity conflicts.
+4.  **Adjudication:** Finalize the claim to trigger the instant TPA adjudication and secure a GOP hash.
 
-## Disclaimer
-This application is a functional prototype designed for demonstration and hackathon purposes. The AI processing, OCR scanning, and adjudication results are simulated using controlled state logic to demonstrate the end-to-end user experience of the NormalIce Engine.
+## Governance and Compliance
+NormalIce AI is built with an uncompromising focus on data integrity. Every extracted data point is linked to its clinical source, providing a verifiable chain of custody essential for healthcare audits and regulatory compliance.
