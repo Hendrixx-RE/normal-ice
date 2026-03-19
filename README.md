@@ -1,5 +1,9 @@
 # NormalIce AI: Enterprise Clinical Data Normalization and Adjudication Engine
 
+
+https://github.com/user-attachments/assets/e709ed24-cd17-44bd-ae2f-551e4017d605
+
+
 ## Product Overview
 NormalIce AI is a production-ready intelligence layer for the healthcare ecosystem, engineered to bridge the gap between unstructured clinical documentation and structured administrative outcomes. The engine provides an automated, end-to-end pipeline that transforms fragmented physician notes and clinical PDFs into validated, FHIR-compliant data assets. By integrating real-time revenue reconciliation and TPA adjudication, NormalIce AI eliminates administrative friction and accelerates the healthcare reimbursement cycle.
 
