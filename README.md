@@ -1,7 +1,7 @@
 # NormalIce AI: Enterprise Clinical Data Normalization and Adjudication Engine
 
 
-https://github.com/user-attachments/assets/e709ed24-cd17-44bd-ae2f-551e4017d605
+https://github.com/user-attachments/assets/c616ce10-5b9a-4691-8603-8a264103e97b
 
 
 ## Product Overview
